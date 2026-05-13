@@ -1,6 +1,9 @@
 // Project portfolio — each entry feeds the homepage Work section,
 // the /projects index page, and the dynamic /projects/:slug detail page.
 //
+// `featuredOnHome: true` = appears in the homepage Work section (max 4).
+// Order here controls display order.
+//
 // To add a project:
 // 1. Drop images into src/assets/images/projects/<slug>/
 // 2. Import and reference them in the `gallery` array below
@@ -8,24 +11,71 @@
 
 export const projects = [
   {
+    slug: 'jetops',
+    name: 'JETOps',
+    sector: 'Aviation Operations SaaS',
+    year: '2026',
+    role: 'SaaS Product Build',
+    duration: 'Ongoing',
+    teamSize: 'In development',
+    featuredOnHome: true,
+    summary:
+      'Aviation operations and charter coordination platform designed for private jet operators and brokers, featuring aircraft availability management, booking workflows, operational dashboards, and broker coordination tools.',
+    challenge:
+      'Private jet operators and brokers rely on fragmented tools — spreadsheets, WhatsApp threads, and legacy software — to manage aircraft availability, bookings, and crew. Errors are costly and coordination breakdowns directly impact revenue.',
+    solution:
+      'A purpose-built SaaS platform covering the full operational arc: aircraft availability calendar, booking and quote workflows, broker coordination portal, crew scheduling, and real-time operational dashboards for management oversight.',
+    impact:
+      'Currently in active development. Designed to reduce booking coordination time by over 70% and give operators a single source of truth for fleet status and revenue.',
+    tags: ['SaaS', 'Web App', 'Mobile', 'Aviation', 'Operations'],
+    coverImage: null,
+    gallery: [],
+    liveUrl: null,
+    testimonial: null,
+  },
+  {
+    slug: 'domestic-staff-app',
+    name: 'DomesticStaffApp',
+    sector: 'Workforce & Household Platform',
+    year: '2025',
+    role: 'Platform Build',
+    duration: 'Ongoing',
+    teamSize: 'In development',
+    featuredOnHome: true,
+    summary:
+      'Domestic staffing and workforce platform connecting households with verified domestic workers through onboarding, KYC verification, and operational management workflows.',
+    challenge:
+      'The domestic staffing market in Nigeria operates almost entirely on informal referrals, with no verification, no contracts, and no recourse when placements go wrong — for either the household or the worker.',
+    solution:
+      'A two-sided marketplace with rigorous KYC and background verification for workers, structured onboarding flows, contract management, payment rails, and an employer dashboard for ongoing workforce management.',
+    impact:
+      'Currently in active development. Addresses a significant trust gap in a market with millions of active placements annually.',
+    tags: ['SaaS', 'Marketplace', 'Mobile App', 'Platform', 'KYC'],
+    coverImage: null,
+    gallery: [],
+    liveUrl: null,
+    testimonial: null,
+  },
+  {
     slug: 'zari',
     name: 'ZARI.ng',
-    sector: 'E-commerce',
+    sector: 'E-Commerce Platform',
     year: '2024',
     role: 'Full product build',
     duration: '6 months',
     teamSize: '5 engineers + 1 PM',
+    featuredOnHome: true,
     summary:
-      'Gift-based e-commerce platform with inventory automation, real-time payments, and a 3× user base growth in six months.',
+      'Gift-based e-commerce platform with inventory automation, real-time payments, and a 3× customer base growth in six months.',
     challenge:
       'ZARI needed a gift-focused e-commerce platform that could handle real-time inventory across multiple vendors, secure payment processing for the Nigerian market, and a delightful gifting experience that worked across mobile and desktop.',
     solution:
-      'We built a custom platform with a microservices architecture: vendor inventory sync, Paystack integration with fallback gateways, a curated catalog system, and a checkout flow optimized for gift purchases (delivery scheduling, gift notes, anonymous sender option).',
+      'A custom platform with vendor inventory sync, Paystack integration with fallback gateways, a curated catalog system, and a checkout flow optimized for gift purchases — delivery scheduling, gift notes, anonymous sender option.',
     impact:
-      '3× growth in active users within six months of launch. Average order value increased 47% after introducing the curated gift bundles feature. Cart abandonment dropped to 18% — well below industry average.',
-    tags: ['Web App', 'Payments', 'Inventory', 'Next.js', 'PostgreSQL'],
-    coverImage: null, // TODO: import cover image
-    gallery: [], // TODO: import gallery images
+      '3× growth in customer base within six months of launch. Average order value increased 47% after introducing curated gift bundles. Cart abandonment dropped to 18% — well below industry average.',
+    tags: ['E-Commerce', 'Web App', 'Mobile App', 'Payments', 'Inventory'],
+    coverImage: null,
+    gallery: [],
     liveUrl: 'https://zari.ng',
     testimonial: {
       quote:
@@ -36,20 +86,21 @@ export const projects = [
   {
     slug: 'flybird',
     name: 'FlyBird',
-    sector: 'Aviation',
+    sector: 'Private Aviation ERP',
     year: '2024',
     role: 'ERP + Mobile + Web',
     duration: '8 months',
     teamSize: '6 engineers + 1 PM + 1 designer',
+    featuredOnHome: true,
     summary:
-      'ERP and booking system for a private jet charter operator. Web + native mobile, end-to-end.',
+      'ERP and booking management system developed for a private jet charter operator, supporting aircraft operations, bookings, payments, crew coordination, and operational workflows.',
     challenge:
-      "FlyBird operates in a high-stakes environment where bookings, crew scheduling, fleet maintenance, and customer communication can't afford downtime. They needed to consolidate eight disconnected tools into one platform.",
+      "FlyBird needed to consolidate eight disconnected tools into one platform. In high-stakes aviation, booking errors, crew scheduling conflicts, and payment delays aren't just inconvenient — they're expensive.",
     solution:
-      'A unified ERP covering bookings, fleet management, crew rosters, and customer CRM — plus a customer-facing mobile app (iOS/Android) for quote requests, flight tracking, and in-app communication with concierge.',
+      'A unified ERP covering bookings, fleet management, crew rosters, payments, and customer CRM — plus a customer-facing mobile app (iOS/Android) for quote requests, flight tracking, and concierge communication.',
     impact:
       'Booking turnaround reduced from 4 hours to 22 minutes. Crew scheduling conflicts dropped 89%. The mobile app now handles 60% of new booking enquiries.',
-    tags: ['ERP', 'Mobile', 'Booking', 'React Native', 'Node.js'],
+    tags: ['ERP', 'Operations', 'Dashboard', 'Mobile', 'Aviation'],
     coverImage: null,
     gallery: [],
     liveUrl: null,
@@ -63,6 +114,7 @@ export const projects = [
     role: 'Dashboard + Payments',
     duration: '4 months',
     teamSize: '4 engineers',
+    featuredOnHome: false,
     summary:
       'Cargo logistics dashboard with secure payment rails and live shipment visibility.',
     challenge:
@@ -85,14 +137,15 @@ export const projects = [
     role: 'M&E Platform',
     duration: '5 months',
     teamSize: '3 engineers + 1 PM',
+    featuredOnHome: false,
     summary:
       'Monitoring & Evaluation dashboard with impact tracking for a donor-funded development program.',
     challenge:
       'KDIN runs multiple donor-funded programs across Northern Nigeria. Reporting to international donors required gathering, validating, and visualizing data from over a dozen field locations — manually, monthly, and painfully.',
     solution:
-      'A custom M&E platform with field data collection (offline-capable mobile app for fieldworkers), automated impact metric calculations, and one-click donor report generation in the formats their funders require.',
+      'A custom M&E platform with offline-capable mobile data collection for fieldworkers, automated impact metric calculations, and one-click donor report generation.',
     impact:
-      'Monthly reporting cycle compressed from 2 weeks to 3 days. Donor confidence visibly improved with audit-ready exports. Program leads now spend their time on program design, not data wrangling.',
+      'Monthly reporting cycle compressed from 2 weeks to 3 days. Donor confidence improved with audit-ready exports. Program leads now spend their time on program design, not data wrangling.',
     tags: ['M&E', 'NGO', 'Dashboard', 'Offline-first', 'Reporting'],
     coverImage: null,
     gallery: [],
@@ -100,6 +153,8 @@ export const projects = [
     testimonial: null,
   },
 ];
+
+export const featuredProjects = projects.filter((p) => p.featuredOnHome);
 
 export function getProjectBySlug(slug) {
   return projects.find((p) => p.slug === slug);

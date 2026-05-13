@@ -4,7 +4,7 @@
 //   { name: 'ZARI', logo: zariLogo }
 
 export const clients = [
-  { name: 'ZARI.ng', logo: null, sector: 'E-commerce' },
+  { name: 'ZARI Gifts', logo: null, sector: 'E-commerce' },
   { name: 'FlyBird', logo: null, sector: 'Aviation' },
   { name: 'Moh40', logo: null, sector: 'Logistics' },
   { name: 'KDIN', logo: null, sector: 'NGO' },

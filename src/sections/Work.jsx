@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
-import { projects } from '../data/projects.js';
+import { featuredProjects } from '../data/projects.js';
 
 export default function Work() {
   return (
@@ -23,7 +23,7 @@ export default function Work() {
         </div>
 
         <div className="space-y-0">
-          {projects.map((p, i) => (
+          {featuredProjects.map((p, i) => (
             <Link
               key={p.slug}
               to={`/projects/${p.slug}`}

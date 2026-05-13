@@ -4,7 +4,7 @@ import Stats from '../sections/Stats.jsx';
 import Work from '../sections/Work.jsx';
 import Services from '../sections/Services.jsx';
 import About from '../sections/About.jsx';
-import SaasProduct from '../sections/SaasProduct.jsx';
+// import SaasProduct from '../sections/SaasProduct.jsx';
 import Contact from '../sections/Contact.jsx';
 
 export default function Home({ scrollY }) {
@@ -16,7 +16,7 @@ export default function Home({ scrollY }) {
       <Work />
       <Services />
       <About />
-      <SaasProduct />
+      {/* <SaasProduct /> */}
       <Contact />
     </>
   );
