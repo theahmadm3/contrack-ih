@@ -58,7 +58,7 @@ export const projects = [
   },
   {
     slug: 'zari',
-    name: 'ZARI.ng',
+    name: 'ZARI Gifts',
     sector: 'E-Commerce Platform',
     year: '2024',
     role: 'Full product build',
