@@ -1,28 +1,13 @@
 import { useState, useEffect } from 'react';
 import { ArrowUpRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import hero1 from '../assets/images/hero-1.jpg';
+import hero2 from '../assets/images/hero-2.jpg';
+import hero3 from '../assets/images/hero-3.jpg';
 
-// Unsplash photos: African/Nigerian tech professionals, workspaces, and collaborative settings
 const SLIDES = [
-  {
-    url: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1600&q=85',
-    caption: 'Building the future — Abuja',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1600&q=85',
-    caption: 'Engineering excellence',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=85',
-    caption: 'Collaborative by design',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=1600&q=85',
-    caption: 'Remote-first, world-class',
-  },
-  {
-    url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=1600&q=85',
-    caption: 'Leadership that delivers',
-  },
+  { url: hero1, caption: 'Building the future — Abuja' },
+  { url: hero2, caption: 'Engineering excellence' },
+  { url: hero3, caption: 'Collaborative by design' },
 ];
 
 export default function Hero({ scrollY }) {

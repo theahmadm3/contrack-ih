@@ -17,7 +17,7 @@ export default function Work() {
           </div>
           <div className="lg:col-span-10">
             <h2 className="display-font font-light text-5xl lg:text-7xl leading-[0.95] tracking-tight max-w-4xl">
-              Selected projects, <span className="italic text-navy-pale">honestly built</span>.
+              Selected products, <span className="italic text-navy-pale">honestly built</span>.
             </h2>
           </div>
         </div>
