@@ -1,13 +1,36 @@
-// Project portfolio — each entry feeds the homepage Work section,
-// the /projects index page, and the dynamic /projects/:slug detail page.
-//
-// `featuredOnHome: true` = appears in the homepage Work section (max 4).
-// Order here controls display order.
-//
-// To add a project:
-// 1. Drop images into src/assets/images/projects/<slug>/
-// 2. Import and reference them in the `gallery` array below
-// 3. Add the project object
+// ── Image imports ──────────────────────────────────────────────
+// JETOps (jet-ops-1 to jet-ops-6)
+import jetOps1 from '../assets/images/jet-ops-1.png'; // 2558×1260 — wide hero
+import jetOps2 from '../assets/images/jet-ops-2.png'; // 1200×1210 — near-square
+import jetOps3 from '../assets/images/jet-ops-3.png'; // 914×644   — 4:3
+import jetOps4 from '../assets/images/jet-ops-4.png'; // 1206×518  — ultra-wide
+import jetOps5 from '../assets/images/jet-ops-5.png'; // 1206×518  — ultra-wide
+import jetOps6 from '../assets/images/jet-ops-6.png'; // 1566×1048 — 3:2 tall side
+
+// DomesticStaffApp (dsa-1 to dsa-6)
+import dsa1 from '../assets/images/dsa-1.png'; // 2258×1246 — wide hero
+import dsa2 from '../assets/images/dsa-2.png'; // 2258×1246 — wide tall side
+import dsa3 from '../assets/images/dsa-3.png'; // 1902×884  — wide
+import dsa4 from '../assets/images/dsa-4.png'; // 1326×1086 — near-square
+import dsa5 from '../assets/images/dsa-5.png'; // 1310×1272 — near-square
+import dsa6 from '../assets/images/dsa-6.png'; // 1326×1086 — near-square
+
+// ZARI (zari-1 to zari-6)
+import zari1 from '../assets/images/zari-1.png'; // 2406×1254 — wide hero
+import zari2 from '../assets/images/zari-2.png'; // 2510×1274 — wide tall side
+import zari3 from '../assets/images/zari-3.png'; // 1614×1074 — 4:3
+import zari4 from '../assets/images/zari-4.png'; // 2050×1082 — wide
+import zari5 from '../assets/images/zari-5.png'; // 1614×1074 — 4:3
+import zari6 from '../assets/images/zari-6.png'; // 2000×1042 — wide
+
+// ── Gallery slot assignment guide ──────────────────────────────
+// The ProjectDetail gallery layout is:
+//   [0] Large hero  — best for wide landscape shots (≥2:1 ratio)
+//   [1] 2×2 top-left  ─┐
+//   [2] 2×2 top-right  ├─ best for near-square or 4:3 shots
+//   [3] 2×2 bot-left   |
+//   [4] 2×2 bot-right ─┘
+//   [5] Tall side   — works with any ratio, cropped to fill
 
 export const projects = [
   {
@@ -28,8 +51,15 @@ export const projects = [
     impact:
       'Currently in active development. Designed to reduce booking coordination time by over 70% and give operators a single source of truth for fleet status and revenue.',
     tags: ['SaaS', 'Web App', 'Mobile', 'Aviation', 'Operations'],
-    coverImage: null,
-    gallery: [],
+    coverImage: jetOps1,
+    gallery: [
+      jetOps1, // [0] hero — 2558×1260 wide landscape, JETOps homepage
+      jetOps2, // [1] 2×2 — 1200×1210 near-square, booking form
+      jetOps3, // [2] 2×2 — 914×644, broker network section
+      jetOps4, // [3] 2×2 — 1206×518 ultra-wide, "Need a flight?" CTA
+      jetOps5, // [4] 2×2 — 1206×518 ultra-wide, "Charter Operator?" CTA
+      jetOps6, // [5] side — 1566×1048, built for charter operators grid
+    ],
     liveUrl: null,
     testimonial: null,
   },
@@ -51,14 +81,21 @@ export const projects = [
     impact:
       'Currently in active development. Addresses a significant trust gap in a market with millions of active placements annually.',
     tags: ['SaaS', 'Marketplace', 'Mobile App', 'Platform', 'KYC'],
-    coverImage: null,
-    gallery: [],
+    coverImage: dsa1,
+    gallery: [
+      dsa1, // [0] hero — 2258×1246 wide, landing page
+      dsa4, // [1] 2×2 — 1326×1086 near-square, service personnel listing
+      dsa5, // [2] 2×2 — 1310×1272 near-square, rate the app screen
+      dsa6, // [3] 2×2 — 1326×1086 near-square, create ticket screen
+      dsa3, // [4] 2×2 — 1902×884 wide, dashboard welcome screen
+      dsa2, // [5] side — 2258×1246 wide, sign-up screen
+    ],
     liveUrl: null,
     testimonial: null,
   },
   {
     slug: 'zari',
-    name: 'ZARI Gifts',
+    name: 'ZARI.ng',
     sector: 'E-Commerce Platform',
     year: '2024',
     role: 'Full product build',
@@ -74,8 +111,15 @@ export const projects = [
     impact:
       '3× growth in customer base within six months of launch. Average order value increased 47% after introducing curated gift bundles. Cart abandonment dropped to 18% — well below industry average.',
     tags: ['E-Commerce', 'Web App', 'Mobile App', 'Payments', 'Inventory'],
-    coverImage: null,
-    gallery: [],
+    coverImage: zari1,
+    gallery: [
+      zari1, // [0] hero — 2406×1254 wide, homepage collections
+      zari3, // [1] 2×2 — 1614×1074, product detail modal
+      zari5, // [2] 2×2 — 1614×1074, build your box products
+      zari6, // [3] 2×2 — 2000×1042 wide, product detail page
+      zari4, // [4] 2×2 — 2050×1082 wide, shop / gift box grid
+      zari2, // [5] side — 2510×1274 wide, mobile app features
+    ],
     liveUrl: 'https://zari.ng',
     testimonial: {
       quote:
