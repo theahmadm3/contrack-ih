@@ -58,15 +58,11 @@ export default function Contact() {
             <div className="space-y-4 mono-font text-sm">
               <div className="flex items-center gap-4">
                 <span className="text-navy-pale/60 text-[10px] tracking-wider w-16">EMAIL</span>
-                <span>hello@contrack-ih.com</span>
-              </div>
-              <div className="flex items-center gap-4">
-                <span className="text-navy-pale/60 text-[10px] tracking-wider w-16">WHATSAPP</span>
-                <span>+234 (0) ··· ····</span>
+                <a href='mailto:inquiries@contrack.ng' className="text-navy-pale/60">inquiries@contrack.ng</a>
               </div>
               <div className="flex items-center gap-4">
                 <span className="text-navy-pale/60 text-[10px] tracking-wider w-16">LOCATION</span>
-                <span>Abuja, Nigeria — Remote-first</span>
+                <span>Plot No 1099, Mabushi District, Abuja — Remote-first</span>
               </div>
             </div>
 

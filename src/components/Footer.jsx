@@ -59,9 +59,8 @@ export default function Footer({ time }) {
               anywhere.
             </p>
             <div className="mono-font text-xs space-y-2">
-              <div className="text-navy-pale/60">hello@contrack-ih.com</div>
-              <div className="text-navy-pale/60">+234 (0) ··· ····</div>
-              <div className="text-navy-pale/60">Abuja, Nigeria</div>
+              <a href='mailto:inquiries@contrack.ng' className="text-navy-pale/60">inquiries@contrack.ng</a>
+              <div className="text-navy-pale/60">Plot No 1099, Mabushi District, Abuja</div>
             </div>
           </div>
 
