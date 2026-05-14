@@ -3,7 +3,7 @@ import { credentials } from '../data/stats.js';
 
 export default function Clients() {
   return (
-    <section className="py-16 lg:py-20 bg-white border-b border-navy/10 relative">
+    <section className="py-16 lg:py-20 bg-white border-b border-navy/10">
       <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
 
         {/* Heading */}
@@ -15,30 +15,41 @@ export default function Clients() {
           </div>
           <div className="lg:col-span-9">
             <h2 className="display-font font-light text-2xl lg:text-3xl tracking-tight max-w-3xl">
-              Teams across <span className="italic text-navy-mid">e-commerce, aviation, logistics, and the public sector</span> build with us.
+              Teams across{' '}
+              <span className="italic text-navy-mid">
+                e-commerce, aviation, logistics, and the public sector
+              </span>{' '}
+              build with us.
             </h2>
           </div>
         </div>
 
-        {/* Client logo grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-px bg-navy/15 border border-navy/15">
+        {/* Client logo grid
+            — 2 cols on mobile, 3 on sm, 5 on lg
+            — mix-blend-multiply makes the black logo backgrounds invisible on white
+            — each logo is sized by its own maxW so wide/flat logos don't look tiny
+              and tall logos don't overflow
+        */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 border border-navy/10 divide-x divide-y divide-navy/10">
           {clients.map((client) => (
             <div
               key={client.name}
-              className="bg-white aspect-[3/2] flex flex-col items-center justify-center p-4 group hover:bg-navy-pale/30 transition-colors"
+              className="bg-white cursor-pointer flex flex-col items-center justify-center gap-3 py-8 px-4 lg:py-10 lg:px-6 group hover:bg-navy-pale/20 transition-colors"
             >
               {client.logo ? (
                 <img
                   src={client.logo}
                   alt={`${client.name} logo`}
-                  className="max-h-12 max-w-[80%] object-contain grayscale group-hover:grayscale-0 transition-all opacity-70 group-hover:opacity-100"
+                  className={`w-full ${client.maxW} h-auto object-contain
+                    opacity-60 group-hover:opacity-100 transition-opacity
+                    [mix-blend-mode:multiply]`}
                 />
               ) : (
                 <span className="display-font text-xl lg:text-2xl text-navy/40 group-hover:text-navy transition-colors">
                   {client.name}
                 </span>
               )}
-              <span className="mono-font text-[9px] tracking-[0.15em] uppercase text-navy-mid/60 mt-2">
+              <span className="mono-font text-[9px] tracking-[0.18em] uppercase text-navy-mid/60 group-hover:text-navy-mid transition-colors">
                 {client.sector}
               </span>
             </div>
